@@ -7,7 +7,7 @@ const checkDiagonalWinner = (board) => {
     for (let j = 0; j < board[i].length; j++) {
       const regex = /[xo]/;
 
-      if (board[i].length !== 7) return "Please provide a 7 * 6 matrix";      
+      if (board[i].length !== 7) return "Please provide a 7 * 6 matrix";
 
       if (regex.test(board[i][j])) {
         const player = board[i][j];
@@ -15,13 +15,9 @@ const checkDiagonalWinner = (board) => {
         const diagRight = [];
 
         const leftSq = getSubSquare(board, j - 3, i + 1);
-        
+
         if (typeof leftSq !== "string") {
-          diagLeft.push(
-            leftSq[0][2],
-            leftSq[1][1],
-            leftSq[2][0]
-          );
+          diagLeft.push(leftSq[0][2], leftSq[1][1], leftSq[2][0]);
         } else {
           diagLeft.push(null);
         }
@@ -29,11 +25,7 @@ const checkDiagonalWinner = (board) => {
         const rightSq = getSubSquare(board, j + 1, i + 1);
 
         if (typeof rightSq !== "string") {
-          diagRight.push(
-            rightSq[0][0],
-            rightSq[1][1],
-            rightSq[2][2]
-          );
+          diagRight.push(rightSq[0][0], rightSq[1][1], rightSq[2][2]);
         } else {
           diagRight.push(null);
         }

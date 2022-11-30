@@ -72,4 +72,13 @@ class LinkFour {
   }
 }
 
+// inquirer
+//   .prompt([{ name: "hello p1", message: "Player 1: Please enter your name" }])
+//   .then((answer) => {
+//     console.log(answer);
+//   })
+//   .catch((err) => {
+//     console.log(err, "summat's wrong m8!");
+//   });
+
 module.exports = { LinkFour };
